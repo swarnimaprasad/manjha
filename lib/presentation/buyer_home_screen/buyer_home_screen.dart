@@ -48,7 +48,9 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                             width: getHorizontalSize(96),
                                             text: "lbl_shop_now".tr,
                                             margin: getMargin(
-                                                left: 80, bottom: 220, right:20),
+                                                left: 80,
+                                                bottom: 220,
+                                                right: 20),
                                             shape:
                                                 ButtonShape.RoundedBorder12_1,
                                             onTap: onTapShopnow,
@@ -86,7 +88,7 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                               getHorizontalSize(
                                                                   319),
                                                           padding: getPadding(
-                                                            right: 28),
+                                                              right: 28),
                                                           child: Text(
                                                               "msg_pashmina_dhaago"
                                                                   .tr,
@@ -97,23 +99,27 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                               style: AppStyle
                                                                   .txtDMSerifDisplayItalic30WhiteA700)),
                                                       Padding(
-                                                        padding:getPadding(right: 30),
-                                                       child: Text(
-                                                          "msg_the_carpetmaking"
-                                                              .tr,
-                                                          overflow: TextOverflow
-                                                              .ellipsis,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: AppStyle
-                                                              .txtDMSansBold10
-                                                              .copyWith(
-                                                                  letterSpacing:
-                                                                      getHorizontalSize(
-                                                                          3.0)))),
+                                                          padding: getPadding(
+                                                              right: 30),
+                                                          child: Text(
+                                                              "msg_the_carpetmaking"
+                                                                  .tr,
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: AppStyle
+                                                                  .txtDMSansBold10
+                                                                  .copyWith(
+                                                                      letterSpacing:
+                                                                          getHorizontalSize(
+                                                                              3.0)))),
                                                       Padding(
                                                           padding: getPadding(
-                                                              top: 9, right: 32),
+                                                              top: 9,
+                                                              right: 32),
                                                           child: Divider(
                                                               height:
                                                                   getVerticalSize(
@@ -132,7 +138,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                               getHorizontalSize(
                                                                   278),
                                                           margin: getMargin(
-                                                              right: 32, top: 3),
+                                                              right: 32,
+                                                              top: 3),
                                                           child: Text(
                                                               "msg_the_pashmina_industry"
                                                                   .tr,
@@ -234,7 +241,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                           child: Padding(
                                                               padding:
                                                                   getPadding(
-                                                                      top: 8, left: 12),
+                                                                      top: 8,
+                                                                      left: 12),
                                                               child: Divider(
                                                                   height:
                                                                       getVerticalSize(
@@ -259,8 +267,9 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                                       257),
                                                               margin: getMargin(
                                                                   top: 9),
-                                                              padding:getPadding(
-                                                                left:40),
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 40),
                                                               child: Text(
                                                                   "msg_bamboo_farming_in"
                                                                       .tr,
@@ -310,7 +319,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                                       .txtDMSerifDisplayItalic30WhiteA700))),
                                                       Padding(
                                                           padding: getPadding(
-                                                              left: 102, top: 1),
+                                                              left: 102,
+                                                              top: 1),
                                                           child: Text(
                                                               "msg_the_bangle_industry"
                                                                   .tr,
@@ -328,7 +338,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                                               3.0)))),
                                                       Padding(
                                                           padding: getPadding(
-                                                              top: 12,left:40),
+                                                              top: 12,
+                                                              left: 40),
                                                           child: Divider(
                                                               height:
                                                                   getVerticalSize(
@@ -344,12 +355,14 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                                       0))),
                                                       Padding(
                                                           padding: getPadding(
-                                                              left: 3,
-                                                              top: 4),
+                                                              left: 3, top: 4),
                                                           child: Row(
-                                                              mainAxisAlignment: MainAxisAlignment.end,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .end,
                                                               crossAxisAlignment:
-                                                                  CrossAxisAlignment.start,
+                                                                  CrossAxisAlignment
+                                                                      .start,
                                                               children: [
                                                                 CustomButton(
                                                                     height:
@@ -361,7 +374,12 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                                     text:
                                                                         "lbl_shop_now"
                                                                             .tr,
-                                                                    margin: getMargin(top: 75,bottom:10,right: 40),
+                                                                    margin: getMargin(
+                                                                        top: 75,
+                                                                        bottom:
+                                                                            10,
+                                                                        right:
+                                                                            40),
                                                                     shape: ButtonShape
                                                                         .RoundedBorder12_1,
                                                                     onTap:
@@ -370,7 +388,10 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                                     width:
                                                                         getHorizontalSize(
                                                                             201),
-                                                                    padding: getPadding(left:10,top:5),
+                                                                    padding: getPadding(
+                                                                        left:
+                                                                            10,
+                                                                        top: 5),
                                                                     child: Text(
                                                                         "msg_firozabad_has_been"
                                                                             .tr,
@@ -387,14 +408,14 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                           Align(
                               alignment: Alignment.topCenter,
                               child: Container(
-                                  width:double.maxFinite,
-                                  height:150,
-                                  padding: getPadding(
-                                      left: 18, right: 18),
-                                  decoration:
-                                  BoxDecoration(image: DecorationImage(
-                                    image: AssetImage('assets/images/img_image60_819x390_1.png'),
-                                    fit:BoxFit.contain)),
+                                  width: double.maxFinite,
+                                  height: 150,
+                                  padding: getPadding(left: 18, right: 18),
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/img_image60_819x390_1.png'),
+                                          fit: BoxFit.contain)),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
@@ -403,8 +424,7 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                       children: [
                                         Container(
                                             width: getHorizontalSize(188),
-                                            margin:
-                                                getMargin(top: 30),
+                                            margin: getMargin(top: 30),
                                             child: Text(
                                                 "msg_welcome_back_payal".tr,
                                                 maxLines: null,
@@ -417,8 +437,7 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                 "msg_the_textiles_of".tr,
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
-                                                style: AppStyle
-                                                    .txtDMSansBold10
+                                                style: AppStyle.txtDMSansBold10
                                                     .copyWith(
                                                         letterSpacing:
                                                             getHorizontalSize(
@@ -426,7 +445,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                         Align(
                                             alignment: Alignment.centerRight,
                                             child: Padding(
-                                                padding: getPadding(right: 50,top: 10),
+                                                padding: getPadding(
+                                                    right: 50, top: 10),
                                                 child: Divider(
                                                     height: getVerticalSize(1),
                                                     thickness:
@@ -436,33 +456,27 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                     indent:
                                                         getHorizontalSize(22))))
                                       ]))),
-                                          Align(
-                                            alignment: Alignment.topCenter,
-                                            child: Container(
-                                                width: getHorizontalSize(306),
-                                                margin: getMargin(
-                                                    left: 30,
-                                                    top:900,
-                                                    right: 42),
-                                                child: Text(
-                                                    "msg_suit_patiala_chunni"
-                                                        .tr,
-                                                    maxLines: null,
-                                                    textAlign: TextAlign.left,
-                                                    style: AppStyle
-                                                        .txtDMSerifDisplayItalic30WhiteA700))),
-                                          Align(
-                                            alignment: Alignment.topRight,
-                                            child: Padding(
-                                                padding: getPadding(right: 70, left:20, top:990),
-                                                child: Divider(
-                                                    height: getVerticalSize(1),
-                                                    thickness:
-                                                        getVerticalSize(1),
-                                                    color:
-                                                        ColorConstant.whiteA700,
-                                                    indent:
-                                                        getHorizontalSize(18)))),
+                          Align(
+                              alignment: Alignment.topCenter,
+                              child: Container(
+                                  width: getHorizontalSize(306),
+                                  margin:
+                                      getMargin(left: 30, top: 900, right: 42),
+                                  child: Text("msg_suit_patiala_chunni".tr,
+                                      maxLines: null,
+                                      textAlign: TextAlign.left,
+                                      style: AppStyle
+                                          .txtDMSerifDisplayItalic30WhiteA700))),
+                          Align(
+                              alignment: Alignment.topRight,
+                              child: Padding(
+                                  padding:
+                                      getPadding(right: 70, left: 20, top: 990),
+                                  child: Divider(
+                                      height: getVerticalSize(1),
+                                      thickness: getVerticalSize(1),
+                                      color: ColorConstant.whiteA700,
+                                      indent: getHorizontalSize(18)))),
                           Align(
                               alignment: Alignment.topLeft,
                               child: Container(
@@ -473,14 +487,13 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                       textAlign: TextAlign.left,
                                       style: AppStyle.txtPoppinsMedium12))),
                           Padding(
-                                            padding: getPadding(top: 7),
-                                            child: Divider(
-                                                height: getVerticalSize(1),
-                                                thickness: getVerticalSize(1),
-                                                color: ColorConstant.gray90002,
-                                                indent: getHorizontalSize(19),
-                                                endIndent:
-                                                    getHorizontalSize(21))),
+                              padding: getPadding(top: 7),
+                              child: Divider(
+                                  height: getVerticalSize(1),
+                                  thickness: getVerticalSize(1),
+                                  color: ColorConstant.gray90002,
+                                  indent: getHorizontalSize(19),
+                                  endIndent: getHorizontalSize(21))),
                           Align(
                               alignment: Alignment.topCenter,
                               child: Padding(
@@ -491,24 +504,26 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                           MainAxisAlignment.start,
                                       children: [
                                         CustomAppBar(
-                                            height: getVerticalSize(31),
+                                            height: getVerticalSize(38),
                                             leadingWidth: 42,
                                             leading: AppbarImage(
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                svgPath: ImageConstant
-                                                    .imgMenuGray900,
-                                                margin: getMargin(
-                                                    left: 18, top: 7)),
+                                                margin: getMargin(left: 15),
+                                                height: getSize(10),
+                                                width: getSize(10),
+                                                svgPath:
+                                                    ImageConstant.imgManjha),
                                             centerTitle: true,
                                             title: Row(children: [
+                                              Text("             "),
                                               AppbarImage(
                                                   height: getSize(24),
                                                   width: getSize(24),
                                                   svgPath:
                                                       ImageConstant.imgLocation,
                                                   margin: getMargin(
-                                                      top: 3, bottom: 1, left: 2)),
+                                                      top: 3,
+                                                      bottom: 1,
+                                                      left: 2)),
                                               Container(
                                                   height: getVerticalSize(
                                                       29.079998),
@@ -564,15 +579,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                             ]),
                                             actions: [
                                               AppbarImage(
-                                                  height: getSize(24),
-                                                  width: getSize(24),
-                                                  svgPath: ImageConstant
-                                                      .imgSearchGray90001,
-                                                  margin: getMargin(
-                                                      left: 18, top: 7)),
-                                              AppbarImage(
-                                                  height: getSize(24),
-                                                  width: getSize(24),
+                                                  height: getSize(28),
+                                                  width: getSize(28),
                                                   svgPath: ImageConstant
                                                       .imgSearchGray9000124x24,
                                                   margin: getMargin(
@@ -601,15 +609,12 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                             prefix: Container(
                                                 margin: getMargin(
                                                     left: 16,
-                                                    top: 12,
+                                                    top: 10,
                                                     right: 9,
                                                     bottom: 12),
-                                                decoration: BoxDecoration(
-                                                    color:
-                                                        ColorConstant.gray600),
                                                 child: CustomImageView(
                                                     svgPath: ImageConstant
-                                                        .imgSearchGray600)),
+                                                        .imgSearchGray90001)),
                                             prefixConstraints: BoxConstraints(
                                                 maxHeight: getVerticalSize(40)),
                                             suffix: Padding(
@@ -717,8 +722,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                           style: AppStyle
                                                               .txtPoppinsMedium10)),
                                                   Padding(
-                                                      padding:
-                                                          getPadding(top: 1,left:4),
+                                                      padding: getPadding(
+                                                          top: 1, left: 4),
                                                       child: Text(
                                                           "lbl_paintings".tr,
                                                           overflow: TextOverflow
@@ -728,8 +733,8 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                           style: AppStyle
                                                               .txtPoppinsMedium10)),
                                                   Padding(
-                                                      padding:
-                                                          getPadding(bottom: 1,right:10),
+                                                      padding: getPadding(
+                                                          bottom: 1, right: 10),
                                                       child: Text(
                                                           "lbl_kitchen".tr,
                                                           overflow: TextOverflow
@@ -1018,7 +1023,7 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
             })));
   }
 
-    String getCurrentRoute(BottomBarEnum type) {
+  String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
         return AppRoutes.buyerHomeScreen;
@@ -1043,6 +1048,7 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
         return DefaultWidget();
     }
   }
+
   onTapShopnow() {
     Get.toNamed(AppRoutes.frameTenScreen);
   }

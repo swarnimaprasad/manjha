@@ -14,45 +14,45 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
             extendBody: true,
             extendBodyBehindAppBar: true,
             appBar: CustomAppBar(
-                height: getVerticalSize(98),
-                leadingWidth: 43,
+                height: getVerticalSize(50),
+                leadingWidth: 44,
                 leading: AppbarImage(
-                    height: getSize(17),
-                    width: getSize(17),
-                    svgPath: ImageConstant.imgArrowleftGray90001,
-                    margin: getMargin(left: 26, top: 32, bottom: 48),
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgManjha,
+                    margin: getMargin(left: 14),
                     onTap: onTapArrowleft11),
-                title: AppbarImage(
-                    height: getSize(21),
-                    width: getSize(21),
-                    svgPath: ImageConstant.imgMenuGray900,
-                    margin: getMargin(left: 8)),
-                actions: [
-                  AppbarImage(
-                      height: getSize(21),
-                      width: getSize(21),
+                title:
+                  Text("   "+"lbl_manjha".tr,
+                  overflow:TextOverflow.ellipsis,
+                  textAlign: TextAlign.left,
+                  style: AppStyle.txtPoppinsBold16.copyWith(
+                  letterSpacing:
+                    getHorizontalSize(1.6))),
+                actions:[  AppbarImage(
+                      height: getSize(27),
+                      width: getSize(27),
                       svgPath: ImageConstant.imgSearchGray9000121x21,
                       margin:
-                          getMargin(left: 24, top: 31, right: 44, bottom: 2)),
+                          getMargin(left: 135)),
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(28),
+                      width: getSize(28),
                       svgPath: ImageConstant.imgSearch24x24,
-                      margin: getMargin(left: 12, top: 30, right: 68),
+                      margin: getMargin(left: 12, right:20),
                       onTap: onTapSearchOne11)
-                ],
-                styleType: Style.bgFillLime50_1),
+            ]),
             body: Container(
                 width: size.width,
                 height: size.height,
-                padding: getPadding(top: 98, bottom: 86),
+                padding: getPadding(top: 48, bottom: 36),
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         begin: Alignment(-0.09, -0.25),
                         end: Alignment(1, 0.81),
                         colors: [
-                      ColorConstant.gray800,
-                      ColorConstant.gray90001
+                      Color.fromARGB(255, 196, 176, 141),
+                      Color.fromARGB(255, 202, 159, 66)
                     ])),
                 child: SingleChildScrollView(
                     child: Container(
@@ -190,8 +190,6 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                                           top: 10,
                                                           right: 14,
                                                           bottom: 10),
-                                                      decoration: AppDecoration
-                                                          .gradientBlack90066Bluegray10066,
                                                       child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.min,
@@ -210,7 +208,7 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                                                     padding:
                                                                         getPadding(
                                                                             top:
-                                                                                104),
+                                                                                53, left: 225),
                                                                     child: Text(
                                                                         "lbl_madhubani"
                                                                             .tr,
@@ -255,7 +253,7 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                         Align(
                                             alignment: Alignment.bottomRight,
                                             child: Padding(
-                                                padding: getPadding(bottom: 19),
+                                                padding: getPadding(bottom: 19,right: 15),
                                                 child: Text(
                                                     "lbl_blue_pottery".tr,
                                                     overflow:
@@ -265,24 +263,24 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                                         .txtDMSerifDisplayItalic26Lime50)))
                                       ])))
                         ])))),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }

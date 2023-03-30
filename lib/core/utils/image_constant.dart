@@ -182,6 +182,8 @@ class ImageConstant {
 
   static String imgCloseLime50 = 'assets/images/img_close_lime_50.svg';
 
+  static String imgManjha = 'assets/images/img_close_black_50.svg';
+
   static String imgGroup1105 = 'assets/images/img_group1105.svg';
 
   static String imgOnboardingtwo = 'assets/images/img_onboardingtwo.png';
