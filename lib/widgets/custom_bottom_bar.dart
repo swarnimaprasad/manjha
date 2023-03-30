@@ -59,22 +59,14 @@ class CustomBottomBar extends StatelessWidget {
             return BottomNavigationBarItem(
               icon: CustomImageView(
                 svgPath: bottomMenuList[index].icon,
-                height: getSize(
-                  24,
-                ),
-                width: getSize(
-                  24,
-                ),
+                height: getSize(24),
+                width: getSize(24),
                 color: ColorConstant.lime50,
               ),
               activeIcon: CustomImageView(
                 svgPath: bottomMenuList[index].icon,
-                height: getSize(
-                  24,
-                ),
-                width: getSize(
-                  24,
-                ),
+                height: getSize(24),
+                width: getSize(24),
                 color: ColorConstant.lime50,
               ),
               label: '',

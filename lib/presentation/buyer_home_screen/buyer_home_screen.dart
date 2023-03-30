@@ -14,13 +14,13 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            resizeToAvoidBottomInset: true,
+            resizeToAvoidBottomInset: false,
             backgroundColor: ColorConstant.whiteA700,
             body: SizedBox(
                 width: size.width,
                 child: SingleChildScrollView(
                     child: Container(
-                        height: getVerticalSize(2780),
+                        height: getVerticalSize(2900),
                         width: double.maxFinite,
                         child: Stack(alignment: Alignment.topCenter, children: [
                           CustomImageView(
@@ -387,10 +387,14 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                           Align(
                               alignment: Alignment.topCenter,
                               child: Container(
+                                  width:double.maxFinite,
+                                  height:150,
                                   padding: getPadding(
-                                      left: 18, top: 10, right: 18, bottom: 14),
+                                      left: 18, right: 18),
                                   decoration:
-                                      AppDecoration.gradientGray500WhiteA70000,
+                                  BoxDecoration(image: DecorationImage(
+                                    image: AssetImage('assets/images/img_image60_819x390_1.png'),
+                                    fit:BoxFit.contain)),
                                   child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
@@ -400,28 +404,13 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                         Container(
                                             width: getHorizontalSize(188),
                                             margin:
-                                                getMargin(top: 40),
+                                                getMargin(top: 30),
                                             child: Text(
                                                 "msg_welcome_back_payal".tr,
                                                 maxLines: null,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
                                                     .txtDMSerifDisplayItalic30Gray90002)),
-                                        Align(
-                                            alignment: Alignment.centerRight,
-                                            child: Container(
-                                                width: getHorizontalSize(306),
-                                                margin: getMargin(
-                                                    left: 18,
-                                                    top: 730,
-                                                    right: 42),
-                                                child: Text(
-                                                    "msg_suit_patiala_chunni"
-                                                        .tr,
-                                                    maxLines: null,
-                                                    textAlign: TextAlign.left,
-                                                    style: AppStyle
-                                                        .txtDMSerifDisplayItalic30WhiteA700))),
                                         Padding(
                                             padding: getPadding(left: 20),
                                             child: Text(
@@ -447,6 +436,33 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                     indent:
                                                         getHorizontalSize(22))))
                                       ]))),
+                                          Align(
+                                            alignment: Alignment.topCenter,
+                                            child: Container(
+                                                width: getHorizontalSize(306),
+                                                margin: getMargin(
+                                                    left: 30,
+                                                    top:900,
+                                                    right: 42),
+                                                child: Text(
+                                                    "msg_suit_patiala_chunni"
+                                                        .tr,
+                                                    maxLines: null,
+                                                    textAlign: TextAlign.left,
+                                                    style: AppStyle
+                                                        .txtDMSerifDisplayItalic30WhiteA700))),
+                                          Align(
+                                            alignment: Alignment.topRight,
+                                            child: Padding(
+                                                padding: getPadding(right: 70, left:20, top:990),
+                                                child: Divider(
+                                                    height: getVerticalSize(1),
+                                                    thickness:
+                                                        getVerticalSize(1),
+                                                    color:
+                                                        ColorConstant.whiteA700,
+                                                    indent:
+                                                        getHorizontalSize(18)))),
                           Align(
                               alignment: Alignment.topLeft,
                               child: Container(
@@ -456,6 +472,15 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                       maxLines: null,
                                       textAlign: TextAlign.left,
                                       style: AppStyle.txtPoppinsMedium12))),
+                          Padding(
+                                            padding: getPadding(top: 7),
+                                            child: Divider(
+                                                height: getVerticalSize(1),
+                                                thickness: getVerticalSize(1),
+                                                color: ColorConstant.gray90002,
+                                                indent: getHorizontalSize(19),
+                                                endIndent:
+                                                    getHorizontalSize(21))),
                           Align(
                               alignment: Alignment.topCenter,
                               child: Padding(
@@ -693,18 +718,18 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                               .txtPoppinsMedium10)),
                                                   Padding(
                                                       padding:
-                                                          getPadding(top: 1),
+                                                          getPadding(top: 1,left:4),
                                                       child: Text(
                                                           "lbl_paintings".tr,
                                                           overflow: TextOverflow
                                                               .ellipsis,
                                                           textAlign:
-                                                              TextAlign.left,
+                                                              TextAlign.center,
                                                           style: AppStyle
                                                               .txtPoppinsMedium10)),
                                                   Padding(
                                                       padding:
-                                                          getPadding(bottom: 1),
+                                                          getPadding(bottom: 1,right:10),
                                                       child: Text(
                                                           "lbl_kitchen".tr,
                                                           overflow: TextOverflow
