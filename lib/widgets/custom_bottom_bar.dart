@@ -37,8 +37,8 @@ class CustomBottomBar extends StatelessWidget {
     return Obx(
       () => Container(
         margin: getMargin(
-          left: 30,
-          right: 30,
+          left: 45,
+          right: 15,
         ),
         decoration: BoxDecoration(
           color: ColorConstant.gray90002,

@@ -20,7 +20,7 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                 width: size.width,
                 child: SingleChildScrollView(
                     child: Container(
-                        height: getVerticalSize(2900),
+                        height: getVerticalSize(2800),
                         width: double.maxFinite,
                         child: Stack(alignment: Alignment.topCenter, children: [
                           CustomImageView(
@@ -1012,24 +1012,24 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
                                                     ])))
                                       ])))
                         ])))),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
-  String getCurrentRoute(BottomBarEnum type) {
+    String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }
@@ -1043,7 +1043,6 @@ class BuyerHomeScreen extends GetWidget<BuyerHomeController> {
         return DefaultWidget();
     }
   }
-
   onTapShopnow() {
     Get.toNamed(AppRoutes.frameTenScreen);
   }
