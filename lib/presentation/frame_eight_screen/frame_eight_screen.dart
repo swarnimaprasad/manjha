@@ -140,7 +140,7 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                       children: [
                                         CustomImageView(
                                             imagePath: ImageConstant
-                                                .imgRectangle54176x390,
+                                                .imgRectangle61162x390,
                                             height: getVerticalSize(176),
                                             width: getHorizontalSize(390),
                                             alignment: Alignment.center,
@@ -161,13 +161,15 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Padding(
+                                    GestureDetector(
+                                              onTap: () {onTapTxtMadhubani();},
+                                    child: Padding(
                                         padding: getPadding(right: 24),
-                                        child: Text("lbl_terracotta".tr,
+                                        child: Text("lbl_madhubani".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
                                             style: AppStyle
-                                                .txtDMSerifDisplayItalic26)),
+                                                .txtDMSerifDisplayItalic26))),
                                     Container(
                                         height: getVerticalSize(162),
                                         width: double.maxFinite,
@@ -176,8 +178,7 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                             alignment: Alignment.center,
                                             children: [
                                               CustomImageView(
-                                                  imagePath: ImageConstant
-                                                      .imgRectangle61162x390,
+                                                  imagePath: ImageConstant.imgRectangle54176x390,
                                                   height: getVerticalSize(162),
                                                   width: getHorizontalSize(390),
                                                   alignment: Alignment.center),
@@ -198,19 +199,12 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
                                                                   .end,
-                                                          children: [
-                                                            GestureDetector(
-                                                                onTap: () {
-                                                                  onTapTxtMadhubani();
-                                                                },
-                                                                child: Padding(
+                                                          children: [Padding(
                                                                     padding:
                                                                         getPadding(
-                                                                            top:
-                                                                                53, left: 225),
+                                                                            top:53, left: 225),
                                                                     child: Text(
-                                                                        "lbl_madhubani"
-                                                                            .tr,
+                                                                        "lbl_terracotta".tr,
                                                                         overflow:
                                                                             TextOverflow
                                                                                 .ellipsis,
@@ -218,7 +212,7 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                                                                             TextAlign
                                                                                 .left,
                                                                         style: AppStyle
-                                                                            .txtDMSerifDisplayItalic26Lime50)))
+                                                                            .txtDMSerifDisplayItalic26Lime50))
                                                           ])))
                                             ]))
                                   ])),

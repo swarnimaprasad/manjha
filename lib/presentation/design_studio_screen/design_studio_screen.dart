@@ -11,15 +11,52 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+            extendBody: true,
+            extendBodyBehindAppBar: true,
+            appBar: CustomAppBar(
+                height: getVerticalSize(50),
+                leadingWidth: 44,
+                leading: AppbarImage(
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title:
+                  Text("   "+"lbl_manjha".tr,
+                  overflow:TextOverflow.ellipsis,
+                  textAlign: TextAlign.left,
+                  style: AppStyle.txtPoppinsBold16.copyWith(
+                  letterSpacing:
+                    getHorizontalSize(1.6))),
+                actions:[  AppbarImage(
+                      height: getSize(27),
+                      width: getSize(27),
+                      svgPath: ImageConstant.imgSearch,
+                      margin:
+                          getMargin(left: 135)),
+                  AppbarImage(
+                      height: getSize(28),
+                      width: getSize(28),
+                      svgPath: ImageConstant.imgSearchLime50,
+                      margin: getMargin(left: 12, right:20))
+            ]),
             body: Container(
+                width: size.width,
                 height: size.height,
-                width: double.maxFinite,
-                decoration: AppDecoration.outlineBlack9003f2,
+                padding: getPadding(top: 48),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment(-0.09, 0),
+                        end: Alignment(1, 0.81),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
                 child: Stack(alignment: Alignment.center, children: [
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                          height: getVerticalSize(679),
+                          height: getVerticalSize(690),
                           width: double.maxFinite,
                           decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -33,61 +70,24 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                       alignment: Alignment.center,
                       child: Container(
                           padding: getPadding(top: 22, bottom: 22),
-                          decoration: AppDecoration.fillGray90002,
-                          child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                CustomAppBar(
-                                    height: getVerticalSize(800),
-                                    leadingWidth: 43,
-                                    leading: AppbarImage(
-                                        height: getSize(17),
-                                        width: getSize(17),
-                                        svgPath: ImageConstant.imgArrowleft,
-                                        margin: getMargin(
-                                            left: 26, top: 2, bottom: 4),
-                                        onTap: onTapArrowleft12),
-                                    title: AppbarImage(
-                                        height: getSize(21),
-                                        width: getSize(21),
-                                        svgPath: ImageConstant.imgMenu,
-                                        margin: getMargin(left: 8)),
-                                    actions: [
-                                      AppbarImage(
-                                          height: getSize(21),
-                                          width: getSize(21),
-                                          svgPath: ImageConstant.imgSearch,
-                                          margin: getMargin(
-                                              left: 24, top: 1, bottom: 2)),
-                                      AppbarImage(
-                                          height: getSize(24),
-                                          width: getSize(24),
-                                          svgPath:
-                                              ImageConstant.imgSearchLime50,
-                                          margin:
-                                              getMargin(left: 12, right: 24),
-                                          onTap: onTapSearchOne12)
-                                    ])
-                              ]))),
+                          decoration: AppDecoration.fillGray90002)),
                   Align(
                       alignment: Alignment.topCenter,
                       child: Container(
                           height: getVerticalSize(246),
                           width: double.maxFinite,
-                          margin: getMargin(top: 53),
                           child:
                               Stack(alignment: Alignment.topCenter, children: [
                             CustomImageView(
                                 imagePath: ImageConstant.imgMaskgroup246x390,
-                                height: getVerticalSize(246),
+                                height: getVerticalSize(346),
                                 width: getHorizontalSize(390),
                                 alignment: Alignment.center),
                             Align(
                                 alignment: Alignment.topCenter,
                                 child: Padding(
                                     padding: getPadding(
-                                        left: 43, top: 28, right: 34),
+                                        left: 43, right: 34),
                                     child: Column(
                                         mainAxisSize: MainAxisSize.min,
                                         crossAxisAlignment:
@@ -135,6 +135,7 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                           child:
                               Stack(alignment: Alignment.topCenter, children: [
                             CustomImageView(
+                              margin: getMargin(top:10),
                                 imagePath: ImageConstant.imgImage80,
                                 height: getVerticalSize(653),
                                 width: getHorizontalSize(390),
@@ -148,7 +149,7 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                                 alignment: Alignment.topCenter,
                                 child: Padding(
                                     padding: getPadding(
-                                        left: 20, top: 20, right: 21),
+                                        left: 20, top: 30, right: 21),
                                     child: Column(
                                         mainAxisSize: MainAxisSize.min,
                                         crossAxisAlignment:
@@ -181,26 +182,6 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                                                       children: [
                                                         Align(
                                                             alignment: Alignment
-                                                                .center,
-                                                            child: Container(
-                                                                width:
-                                                                    getHorizontalSize(
-                                                                        319),
-                                                                decoration:
-                                                                    AppDecoration
-                                                                        .txtOutlineBlack9003f,
-                                                                child: Text(
-                                                                    "msg_orange_is_once_again"
-                                                                        .tr,
-                                                                    maxLines:
-                                                                        null,
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .left,
-                                                                    style: AppStyle
-                                                                        .txtDMSerifDisplayItalic20))),
-                                                        Align(
-                                                            alignment: Alignment
                                                                 .topLeft,
                                                             child: SizedBox(
                                                                 width:
@@ -214,7 +195,7 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                                                                         getVerticalSize(
                                                                             1),
                                                                     color: ColorConstant
-                                                                        .lightBlue900)))
+                                                                        .whiteA700)))
                                                       ]))),
                                           Container(
                                               height: getVerticalSize(17),
@@ -300,25 +281,22 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                                                         alignment: Alignment
                                                             .bottomCenter,
                                                         child: Padding(
-                                                            padding: getPadding(
-                                                                bottom: 2),
+                                                            padding: getPadding(top:55),
                                                             child: SizedBox(
                                                                 width:
                                                                     getHorizontalSize(
                                                                         240),
                                                                 child: Divider(
                                                                     height:
-                                                                        getVerticalSize(
-                                                                            1),
+                                                                        getVerticalSize(1),
                                                                     thickness:
-                                                                        getVerticalSize(
-                                                                            1),
+                                                                        getVerticalSize(1),
                                                                     color: ColorConstant
-                                                                        .blueGray100))))
+                                                                        .whiteA700))))
                                                   ])),
                                           Container(
                                               width: getHorizontalSize(237),
-                                              margin: getMargin(top: 3),
+                                              margin: getMargin(top: 10),
                                               child: Text(
                                                   "msg_is_your_bedroom".tr,
                                                   maxLines: null,
@@ -338,26 +316,26 @@ class DesignStudioScreen extends GetWidget<DesignStudioController> {
                       height: getVerticalSize(128),
                       width: getHorizontalSize(181),
                       alignment: Alignment.topRight,
-                      margin: getMargin(top: 83))
+                      margin: getMargin(top: 23))
                 ])),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }
