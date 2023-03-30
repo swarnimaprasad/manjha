@@ -11,52 +11,36 @@ class CartContainerScreen extends GetWidget<CartContainerController> {
         child: Scaffold(
             extendBody: true,
             extendBodyBehindAppBar: true,
-            backgroundColor: ColorConstant.lime50,
-            body: Container(
-                width: size.width,
-                height: size.height,
-                padding: getPadding(bottom: 86),
-                decoration: BoxDecoration(
-                    color: ColorConstant.lime50,
-                    boxShadow: [
-                      BoxShadow(
-                          color: ColorConstant.black9003f,
-                          spreadRadius: getHorizontalSize(2),
-                          blurRadius: getHorizontalSize(2),
-                          offset: Offset(0, 4))
-                    ],
-                    image: DecorationImage(
-                        image: AssetImage(ImageConstant.imgCart),
-                        fit: BoxFit.cover)),
+            body:Container(
                 child: Navigator(
                     key: Get.nestedKey(1),
                     initialRoute: AppRoutes.cartPage,
                     onGenerateRoute: (routeSetting) => GetPageRoute(
                         page: () => getCurrentPage(routeSetting.name!),
                         transition: Transition.noTransition))),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }
   }
-
+  
   Widget getCurrentPage(String currentRoute) {
     switch (currentRoute) {
       case AppRoutes.cartPage:

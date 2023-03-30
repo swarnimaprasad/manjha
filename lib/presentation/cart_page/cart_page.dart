@@ -18,55 +18,49 @@ class CartPage extends StatelessWidget {
         child: Scaffold(
             extendBody: true,
             extendBodyBehindAppBar: true,
-            backgroundColor: ColorConstant.lime50,
             appBar: CustomAppBar(
-                height: getVerticalSize(86),
-                leadingWidth: 42,
+                height: getVerticalSize(50),
+                leadingWidth: 44,
                 leading: AppbarImage(
-                    height: getSize(17),
-                    width: getSize(17),
-                    svgPath: ImageConstant.imgArrowleftLime50,
-                    margin: getMargin(left: 25, top: 41, bottom: 27),
-                    onTap: onTapArrowleft3),
-                title: AppbarImage(
-                    height: getSize(21),
-                    width: getSize(21),
-                    svgPath: ImageConstant.imgMenuLime50,
-                    margin: getMargin(left: 8)),
-                actions: [
-                  AppbarImage(
-                      height: getSize(21),
-                      width: getSize(21),
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title:
+                  Text("   "+"lbl_manjha".tr,
+                  overflow:TextOverflow.ellipsis,
+                  textAlign: TextAlign.left,
+                  style: AppStyle.txtPoppinsBold16.copyWith(
+                  letterSpacing:
+                    getHorizontalSize(1.6))),
+                actions:[  AppbarImage(
+                      height: getSize(27),
+                      width: getSize(27),
                       svgPath: ImageConstant.imgSearch,
                       margin:
-                          getMargin(left: 25, top: 40, right: 23, bottom: 2)),
+                          getMargin(left: 135)),
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(28),
+                      width: getSize(28),
                       svgPath: ImageConstant.imgSearchLime50,
-                      margin: getMargin(left: 12, top: 39, right: 48),
-                      onTap: onTapSearchOne3)
-                ],
-                styleType: Style.bgFillGray90002),
+                      margin: getMargin(left: 12, right:20))
+            ]),
             body: Container(
                 width: size.width,
                 height: size.height,
-                padding: getPadding(top: 86),
+                padding: getPadding(top: 48),
                 decoration: BoxDecoration(
-                    color: ColorConstant.lime50,
-                    boxShadow: [
-                      BoxShadow(
-                          color: ColorConstant.black9003f,
-                          spreadRadius: getHorizontalSize(2),
-                          blurRadius: getHorizontalSize(2),
-                          offset: Offset(0, 4))
-                    ],
-                    image: DecorationImage(
-                        image: AssetImage(ImageConstant.imgCart),
-                        fit: BoxFit.cover)),
+                  gradient: LinearGradient(
+                        begin: Alignment(-0.09, -0.25),
+                        end: Alignment(1, 0.81),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
                 child: Container(
                     width: double.maxFinite,
-                    padding: getPadding(top: 22, bottom: 22),
+                    padding: getPadding( bottom: 22),
+                    decoration: BoxDecoration(image: DecorationImage(image: AssetImage(ImageConstant.imgImage62),fit: BoxFit.fill)),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -132,7 +126,7 @@ class CartPage extends StatelessWidget {
                                                   top: 20,
                                                   bottom: 21),
                                               padding: getPadding(
-                                                  left: 9,
+                                                  left: 8,
                                                   top: 1,
                                                   right: 9,
                                                   bottom: 1),
@@ -140,8 +134,7 @@ class CartPage extends StatelessWidget {
                                                   .fillLime50
                                                   .copyWith(
                                                       borderRadius:
-                                                          BorderRadiusStyle
-                                                              .roundedBorder13),
+                                                          BorderRadiusStyle.roundedBorder13),
                                               child: Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
@@ -151,8 +144,7 @@ class CartPage extends StatelessWidget {
                                                             .imgPlusGray90001,
                                                         height: getSize(24),
                                                         width: getSize(24),
-                                                        margin:
-                                                            getMargin(top: 1)),
+                                                        margin:getMargin(top: 1)),
                                                     Padding(
                                                         padding: getPadding(
                                                             left: 8,

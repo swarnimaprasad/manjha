@@ -13,7 +13,7 @@ class FrameNineScreen extends GetWidget<FrameNineController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-                        extendBody: true,
+            extendBody: true,
             extendBodyBehindAppBar: true,
             appBar: CustomAppBar(
                 height: getVerticalSize(50),
