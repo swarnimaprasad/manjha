@@ -12,41 +12,55 @@ class EventsScreen extends GetWidget<EventsController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: ColorConstant.whiteA700,
+            extendBody: true,
+            extendBodyBehindAppBar: true,
             appBar: CustomAppBar(
-                height: getVerticalSize(24),
-                leadingWidth: 42,
+                height: getVerticalSize(50),
+                leadingWidth: 44,
                 leading: AppbarImage(
-                    height: getSize(17),
-                    width: getSize(17),
-                    svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 25, top: 2, bottom: 4),
-                    onTap: onTapArrowleft10),
-                title: AppbarImage(
-                    height: getSize(21),
-                    width: getSize(21),
-                    svgPath: ImageConstant.imgMenu,
-                    margin: getMargin(left: 8)),
-                actions: [
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title:
+                  Text("   "+"lbl_manjha".tr,
+                  overflow:TextOverflow.ellipsis,
+                  textAlign: TextAlign.left,
+                  style: AppStyle.txtPoppinsBold16.copyWith(
+                  letterSpacing:
+                    getHorizontalSize(1.6))),
+                actions:[
                   AppbarImage(
-                      height: getSize(21),
-                      width: getSize(21),
+                      height: getSize(27),
+                      width: getSize(27),
                       svgPath: ImageConstant.imgSearch,
-                      margin: getMargin(left: 25, top: 1, bottom: 2)),
+                      margin:
+                          getMargin(left: 135)),
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(28),
+                      width: getSize(28),
                       svgPath: ImageConstant.imgSearchLime50,
-                      margin: getMargin(left: 12, right: 25),
-                      onTap: onTapSearchOne10)
-                ]),
-            body: SizedBox(
+                      margin: getMargin(left: 12, right:20))
+            ]),
+          body: 
+            Container(
                 width: size.width,
+                height: size.height,
+                padding: getPadding(top: 48),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment(-0.09, 0),
+                        end: Alignment(1, 0.6),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
+                
                 child: SingleChildScrollView(
                     child: Container(
-                        height: getVerticalSize(914),
+                        height: getVerticalSize(950),
                         width: double.maxFinite,
-                        margin: getMargin(top: 19),
+                        margin: getMargin(top: 20),
                         child: Stack(alignment: Alignment.topCenter, children: [
                           Align(
                               alignment: Alignment.topLeft,
@@ -54,27 +68,27 @@ class EventsScreen extends GetWidget<EventsController> {
                                   height: getVerticalSize(50),
                                   width: getHorizontalSize(319),
                                   margin: getMargin(left: 29),
-                                  decoration: AppDecoration.fillGray90002,
                                   child: Stack(
                                       alignment: Alignment.bottomCenter,
                                       children: [
                                         Align(
                                             alignment: Alignment.topLeft,
                                             child: Padding(
-                                                padding: getPadding(left: 2),
+                                                padding: getPadding(),
                                                 child: Text(
-                                                    "lbl_events_near_you".tr,
+                                                    "           "+"lbl_events_near_you".tr,
                                                     overflow:
                                                         TextOverflow.ellipsis,
-                                                    textAlign: TextAlign.left,
+                                                    textAlign: TextAlign.center,
                                                     style: AppStyle
                                                         .txtDMSerifDisplayItalic2859Lime100))),
                                         Align(
                                             alignment: Alignment.bottomCenter,
-                                            child: Text(
+                                            child: 
+                                            Text(
                                                 "msg_exhibitions_pop_up".tr,
                                                 overflow: TextOverflow.ellipsis,
-                                                textAlign: TextAlign.left,
+                                                textAlign: TextAlign.center,
                                                 style: AppStyle
                                                     .txtPoppinsBold10Lime100
                                                     .copyWith(
@@ -84,7 +98,7 @@ class EventsScreen extends GetWidget<EventsController> {
                                         Align(
                                             alignment: Alignment.bottomLeft,
                                             child: Padding(
-                                                padding: getPadding(bottom: 17),
+                                                padding: getPadding(top:35,bottom: 20,left:68),
                                                 child: SizedBox(
                                                     width:
                                                         getHorizontalSize(178),
@@ -96,13 +110,12 @@ class EventsScreen extends GetWidget<EventsController> {
                                                         color: ColorConstant
                                                             .gray30001,
                                                         indent:
-                                                            getHorizontalSize(
-                                                                1)))))
+                                                            getHorizontalSize(2)))))
                                       ]))),
                           Align(
                               alignment: Alignment.topCenter,
                               child: Container(
-                                  height: getVerticalSize(324),
+                                  height: getVerticalSize(320),
                                   width: double.maxFinite,
                                   margin: getMargin(top: 76),
                                   child: Stack(
@@ -172,7 +185,7 @@ class EventsScreen extends GetWidget<EventsController> {
                                         CustomImageView(
                                             imagePath: ImageConstant
                                                 .imgMaskgroup538x390,
-                                            height: getVerticalSize(538),
+                                            height: getVerticalSize(600),
                                             width: getHorizontalSize(390),
                                             alignment: Alignment.topCenter),
                                         Align(
@@ -217,12 +230,10 @@ class EventsScreen extends GetWidget<EventsController> {
                                                               children: [
                                                                 Padding(
                                                                     padding:
-                                                                        getPadding(
-                                                                            left:
-                                                                                5),
+                                                                        getPadding(top:3,left:8),
                                                                     child: SizedBox(
                                                                         height: getVerticalSize(
-                                                                            28),
+                                                                            24),
                                                                         child: VerticalDivider(
                                                                             width:
                                                                                 getHorizontalSize(2),
@@ -234,13 +245,13 @@ class EventsScreen extends GetWidget<EventsController> {
                                                                             .imgLocation,
                                                                     height:
                                                                         getVerticalSize(
-                                                                            18),
+                                                                            24),
                                                                     width:
                                                                         getHorizontalSize(
-                                                                            14),
+                                                                            18),
                                                                     margin: getMargin(
                                                                         top:
-                                                                            5)),
+                                                                            8, right: 4)),
                                                                 CustomImageView(
                                                                     svgPath:
                                                                         ImageConstant
@@ -253,15 +264,14 @@ class EventsScreen extends GetWidget<EventsController> {
                                                                             14),
                                                                     margin: getMargin(
                                                                         top:
-                                                                            13)),
+                                                                            10, left: 3)),
                                                                 Padding(
                                                                     padding:
                                                                         getPadding(
-                                                                            left:
-                                                                                5),
+                                                                            left:8),
                                                                     child: SizedBox(
                                                                         height: getVerticalSize(
-                                                                            70),
+                                                                            69),
                                                                         child: VerticalDivider(
                                                                             width:
                                                                                 getHorizontalSize(2),
@@ -274,13 +284,11 @@ class EventsScreen extends GetWidget<EventsController> {
                                                                             .imgLocation,
                                                                     height:
                                                                         getVerticalSize(
-                                                                            18),
+                                                                            24),
                                                                     width:
                                                                         getHorizontalSize(
-                                                                            14),
-                                                                    margin: getMargin(
-                                                                        top:
-                                                                            4)),
+                                                                            18),
+                                                                    margin: getMargin(top:8,right:4)),
                                                                 CustomImageView(
                                                                     svgPath:
                                                                         ImageConstant
@@ -293,7 +301,7 @@ class EventsScreen extends GetWidget<EventsController> {
                                                                             14),
                                                                     margin: getMargin(
                                                                         top:
-                                                                            14))
+                                                                            10, left: 3))
                                                               ])),
                                                       Padding(
                                                           padding: getPadding(
@@ -346,11 +354,9 @@ class EventsScreen extends GetWidget<EventsController> {
                                                                             .txtPoppinsSemiBold12)),
                                                                 Container(
                                                                     width:
-                                                                        getHorizontalSize(
-                                                                            239),
+                                                                        getHorizontalSize(239),
                                                                     margin: getMargin(
-                                                                        top:
-                                                                            39),
+                                                                        top:39),
                                                                     child: Text(
                                                                         "msg_textile_exhibition_janpath"
                                                                             .tr,
@@ -425,16 +431,9 @@ class EventsScreen extends GetWidget<EventsController> {
                                                 padding: getPadding(
                                                     left: 33, top: 28),
                                                 child: Row(children: [
-                                                  CustomImageView(
-                                                      svgPath: ImageConstant
-                                                          .imgLocation,
-                                                      height: getSize(24),
-                                                      width: getSize(24),
-                                                      margin: getMargin(
-                                                          top: 3, bottom: 1)),
                                                   Padding(
                                                       padding:
-                                                          getPadding(left: 6),
+                                                          getPadding(),
                                                       child: Column(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -469,8 +468,7 @@ class EventsScreen extends GetWidget<EventsController> {
                               height: getVerticalSize(37),
                               width: getHorizontalSize(162),
                               text: "msg_view_google_earth".tr,
-                              margin: getMargin(left: 40, top: 304),
-                              variant: ButtonVariant.FillGray90002,
+                              margin: getMargin(left: 20, top: 304),
                               shape: ButtonShape.Square,
                               padding: ButtonPadding.PaddingAll11,
                               fontStyle: ButtonFontStyle.PoppinsBold1072,
@@ -479,28 +477,27 @@ class EventsScreen extends GetWidget<EventsController> {
                           CustomImageView(
                               imagePath: ImageConstant.imgImage82382x259,
                               height: getVerticalSize(382),
-                              width: getHorizontalSize(259),
-                              alignment: Alignment.bottomLeft,
-                              margin: getMargin(bottom: 52))
+                              width: getHorizontalSize(220),
+                              alignment: Alignment.bottomLeft)
                         ])))),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }

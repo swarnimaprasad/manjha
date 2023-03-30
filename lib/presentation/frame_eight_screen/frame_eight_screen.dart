@@ -19,9 +19,8 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                 leading: AppbarImage(
                     height: getSize(40),
                     width: getSize(40),
-                    svgPath: ImageConstant.imgManjha,
-                    margin: getMargin(left: 14),
-                    onTap: onTapArrowleft11),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
                 title:
                   Text("   "+"lbl_manjha".tr,
                   overflow:TextOverflow.ellipsis,
@@ -32,27 +31,27 @@ class FrameEightScreen extends GetWidget<FrameEightController> {
                 actions:[  AppbarImage(
                       height: getSize(27),
                       width: getSize(27),
-                      svgPath: ImageConstant.imgSearchGray9000121x21,
+                      svgPath: ImageConstant.imgSearch,
                       margin:
                           getMargin(left: 135)),
                   AppbarImage(
                       height: getSize(28),
                       width: getSize(28),
-                      svgPath: ImageConstant.imgSearch24x24,
+                      svgPath: ImageConstant.imgSearchLime50,
                       margin: getMargin(left: 12, right:20),
                       onTap: onTapSearchOne11)
             ]),
             body: Container(
                 width: size.width,
                 height: size.height,
-                padding: getPadding(top: 48, bottom: 36),
+                padding: getPadding(top: 48),
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         begin: Alignment(-0.09, -0.25),
                         end: Alignment(1, 0.81),
                         colors: [
-                      Color.fromARGB(255, 196, 176, 141),
-                      Color.fromARGB(255, 202, 159, 66)
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
                     ])),
                 child: SingleChildScrollView(
                     child: Container(
