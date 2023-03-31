@@ -59,7 +59,6 @@ class CartPage extends StatelessWidget {
                     ])),
                 child: Container(
                     width: double.maxFinite,
-                    padding: getPadding( bottom: 22),
                     decoration: BoxDecoration(image: DecorationImage(image: AssetImage(ImageConstant.imgImage62),fit: BoxFit.fill)),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -83,8 +82,7 @@ class CartPage extends StatelessWidget {
                                                   AppDecoration.fillLime50,
                                               child: Stack(children: [
                                                 CustomImageView(
-                                                    imagePath: ImageConstant
-                                                        .imgImage5768x68,
+                                                    imagePath: ImageConstant.imgImage5768x68,
                                                     height: getSize(68),
                                                     width: getSize(68),
                                                     alignment: Alignment.center)
@@ -105,8 +103,7 @@ class CartPage extends StatelessWidget {
                                                             .ellipsis,
                                                         textAlign:
                                                             TextAlign.left,
-                                                        style: AppStyle
-                                                            .txtPoppinsMedium14),
+                                                        style: AppStyle.txtPoppinsMedium14),
                                                     Padding(
                                                         padding:
                                                             getPadding(left: 2),
@@ -181,7 +178,7 @@ class CartPage extends StatelessWidget {
                                           Container(
                                               height: getSize(80),
                                               width: getSize(80),
-                                              margin: getMargin(top: 2),
+                                              margin: getMargin(),
                                               child: Stack(
                                                   alignment: Alignment.center,
                                                   children: [
@@ -192,8 +189,7 @@ class CartPage extends StatelessWidget {
                                                             height: getSize(68),
                                                             width: getSize(68),
                                                             decoration: BoxDecoration(
-                                                                color: ColorConstant
-                                                                    .lime50))),
+                                                                color: ColorConstant.lime50))),
                                                     CustomImageView(
                                                         imagePath: ImageConstant
                                                             .imgImage5780x80,

@@ -13,36 +13,45 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+            extendBody: true,
+            extendBodyBehindAppBar: true,
             appBar: CustomAppBar(
-                height: getVerticalSize(93),
-                leadingWidth: 43,
+                height: getVerticalSize(50),
+                leadingWidth: 44,
                 leading: AppbarImage(
-                    height: getSize(17),
-                    width: getSize(17),
-                    svgPath: ImageConstant.imgArrowleftGray90001,
-                    margin: getMargin(left: 26, top: 24, bottom: 51),
-                    onTap: onTapArrowleft5),
-                title: AppbarImage(
-                    height: getSize(21),
-                    width: getSize(21),
-                    svgPath: ImageConstant.imgMenuGray900,
-                    margin: getMargin(left: 8, top: 23, bottom: 49)),
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title: Text("   " + "lbl_manjha".tr,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.left,
+                    style: AppStyle.txtPoppinsBold16
+                        .copyWith(letterSpacing: getHorizontalSize(1.6))),
                 actions: [
                   AppbarImage(
-                      height: getSize(21),
-                      width: getSize(21),
-                      svgPath: ImageConstant.imgSearchGray90001,
-                      margin:
-                          getMargin(left: 24, top: 23, right: 47, bottom: 2)),
+                      height: getSize(27),
+                      width: getSize(27),
+                      svgPath: ImageConstant.imgSearch,
+                      margin: getMargin(left: 135)),
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
-                      svgPath: ImageConstant.imgSearchGray9000124x24,
-                      margin: getMargin(left: 12, top: 22, right: 71))
-                ],
-                styleType: Style.bgFillLime50),
-            body: SizedBox(
+                      height: getSize(28),
+                      width: getSize(28),
+                      svgPath: ImageConstant.imgSearchLime50,
+                      margin: getMargin(left: 12, right: 20))
+                ]),
+            body: Container(
                 width: size.width,
+                height: size.height,
+                padding: getPadding(top: 48),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment(-0.09, -0.25),
+                        end: Alignment(1, 0.81),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
                 child: SingleChildScrollView(
                     child: Container(
                         decoration: AppDecoration.outlineBlack9003f2,
@@ -268,23 +277,18 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                       .gray300,
                                                                   width:
                                                                       getHorizontalSize(
-                                                                          1)))),
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
+                                                                          1))),
                                                           child: SizedBox(
                                                               child: Divider(
                                                                   height:
-                                                                      getVerticalSize(
-                                                                          10),
+                                                                      getVerticalSize(10),
                                                                   thickness:
-                                                                      getVerticalSize(
-                                                                          10),
+                                                                      getVerticalSize(10),
                                                                   color: ColorConstant
                                                                       .gray300,
                                                                   indent:
-                                                                      getHorizontalSize(
-                                                                          5)))),
+                                                                      getHorizontalSize(5),
+                                                                  endIndent: getHorizontalSize(250)))),
                                                       Align(
                                                           alignment: Alignment
                                                               .centerLeft,

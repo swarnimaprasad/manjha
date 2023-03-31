@@ -12,11 +12,47 @@ class FrameTenScreen extends GetWidget<FrameTenController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            resizeToAvoidBottomInset: false,
+            extendBody: true,
+            extendBodyBehindAppBar: true,
+            appBar: CustomAppBar(
+                height: getVerticalSize(50),
+                leadingWidth: 44,
+                leading: AppbarImage(
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title: Text("   " + "lbl_manjha".tr,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.left,
+                    style: AppStyle.txtPoppinsBold16
+                        .copyWith(letterSpacing: getHorizontalSize(1.6))),
+                actions: [
+                  AppbarImage(
+                      height: getSize(27),
+                      width: getSize(27),
+                      svgPath: ImageConstant.imgSearch,
+                      margin: getMargin(left: 135)),
+                  AppbarImage(
+                      height: getSize(28),
+                      width: getSize(28),
+                      svgPath: ImageConstant.imgSearchLime50,
+                      margin: getMargin(left: 12, right: 20))
+                ]),
             body: Container(
-                height: getVerticalSize(845),
-                width: double.maxFinite,
-                child: Stack(alignment: Alignment.bottomCenter, children: [
+                width: size.width,
+                height: size.height,
+                padding: getPadding(top: 48),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment(-0.09, -0.25),
+                        end: Alignment(1, 0.81),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
+                child: Stack(alignment: Alignment.bottomCenter, 
+                children: [
                   SingleChildScrollView(
                       child: Container(
                           height: getVerticalSize(845),
@@ -61,61 +97,6 @@ class FrameTenScreen extends GetWidget<FrameTenController> {
                                                   alignment:
                                                       Alignment.topCenter,
                                                   children: [
-                                                    CustomAppBar(
-                                                        height: getVerticalSize(
-                                                            110),
-                                                        leadingWidth: 43,
-                                                        leading: AppbarImage(
-                                                            height: getSize(17),
-                                                            width: getSize(17),
-                                                            svgPath: ImageConstant
-                                                                .imgArrowleft,
-                                                            margin: getMargin(
-                                                                left: 26,
-                                                                top: 24,
-                                                                bottom: 68),
-                                                            onTap:
-                                                                onTapArrowleft9),
-                                                        title: AppbarImage(
-                                                            height: getSize(21),
-                                                            width: getSize(21),
-                                                            svgPath:
-                                                                ImageConstant
-                                                                    .imgMenu,
-                                                            margin: getMargin(
-                                                                left: 8,
-                                                                top: 23,
-                                                                bottom: 66)),
-                                                        actions: [
-                                                          AppbarImage(
-                                                              height:
-                                                                  getSize(21),
-                                                              width:
-                                                                  getSize(21),
-                                                              svgPath:
-                                                                  ImageConstant
-                                                                      .imgSearch,
-                                                              margin: getMargin(
-                                                                  left: 24,
-                                                                  top: 23,
-                                                                  right: 64,
-                                                                  bottom: 2)),
-                                                          AppbarImage(
-                                                              height:
-                                                                  getSize(24),
-                                                              width:
-                                                                  getSize(24),
-                                                              svgPath: ImageConstant
-                                                                  .imgSearchLime50,
-                                                              margin: getMargin(
-                                                                  left: 12,
-                                                                  top: 22,
-                                                                  right: 88),
-                                                              onTap:
-                                                                  onTapSearchOne9)
-                                                        ],
-                                                        styleType: Style
-                                                            .bgFillGray90002_1),
                                                     CustomImageView(
                                                         imagePath: ImageConstant
                                                             .imgMaskgroup,
@@ -128,9 +109,7 @@ class FrameTenScreen extends GetWidget<FrameTenController> {
                                                             Alignment.topCenter,
                                                         margin:
                                                             getMargin(top: 59)),
-                                                    Align(
-                                                        alignment: Alignment
-                                                            .bottomLeft,
+                                                    Align(alignment: Alignment.bottomLeft,
                                                         child: Container(
                                                             width:
                                                                 getHorizontalSize(
@@ -449,24 +428,24 @@ class FrameTenScreen extends GetWidget<FrameTenController> {
                       width: getHorizontalSize(390),
                       alignment: Alignment.bottomCenter)
                 ])),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }

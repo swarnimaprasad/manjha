@@ -13,9 +13,45 @@ class BuyerGoogleEarthScreen extends GetWidget<BuyerGoogleEarthController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: ColorConstant.whiteA700,
-            body: SizedBox(
+           extendBody: true,
+            extendBodyBehindAppBar: true,
+            appBar: CustomAppBar(
+                height: getVerticalSize(50),
+                leadingWidth: 44,
+                leading: AppbarImage(
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title: Text("   " + "lbl_manjha".tr,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.left,
+                    style: AppStyle.txtPoppinsBold16
+                        .copyWith(letterSpacing: getHorizontalSize(1.6))),
+                actions: [
+                  AppbarImage(
+                      height: getSize(27),
+                      width: getSize(27),
+                      svgPath: ImageConstant.imgSearch,
+                      margin: getMargin(left: 135)),
+                  AppbarImage(
+                      height: getSize(28),
+                      width: getSize(28),
+                      svgPath: ImageConstant.imgSearchLime50,
+                      margin: getMargin(left: 12, right: 20))
+                ]),
+            body: Container(
                 width: size.width,
+                height: size.height,
+                padding: getPadding(top: 48),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment(-0.09, -0.25),
+                        end: Alignment(1, 0.81),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
                 child: SingleChildScrollView(
                     child: Container(
                         height: size.height,
@@ -24,66 +60,16 @@ class BuyerGoogleEarthScreen extends GetWidget<BuyerGoogleEarthController> {
                             alignment: Alignment.bottomCenter,
                             children: [
                               CustomImageView(
-                                  svgPath: ImageConstant.imgArrowleftBlack900,
-                                  height: getSize(24),
-                                  width: getSize(24),
-                                  alignment: Alignment.topLeft,
-                                  margin: getMargin(left: 30, top: 47),
-                                  onTap: () {
-                                    onTapImgArrowleftOne();
-                                  }),
-                              CustomImageView(
                                   imagePath: ImageConstant.imgImage57,
                                   height: getVerticalSize(801),
                                   width: getHorizontalSize(390),
-                                  alignment: Alignment.bottomCenter),
+                                  alignment: Alignment.topCenter),
                               Align(
-                                  alignment: Alignment.center,
+                                  alignment: Alignment.topCenter,
                                   child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        CustomAppBar(
-                                            height: getVerticalSize(59),
-                                            leadingWidth: 42,
-                                            leading: AppbarImage(
-                                                height: getSize(17),
-                                                width: getSize(17),
-                                                svgPath:
-                                                    ImageConstant.imgArrowleft,
-                                                margin: getMargin(
-                                                    left: 25,
-                                                    top: 24,
-                                                    bottom: 17),
-                                                onTap: onTapArrowleft7),
-                                            title: AppbarImage(
-                                                height: getSize(21),
-                                                width: getSize(21),
-                                                svgPath: ImageConstant.imgMenu,
-                                                margin: getMargin(left: 8)),
-                                            actions: [
-                                              AppbarImage(
-                                                  height: getSize(21),
-                                                  width: getSize(21),
-                                                  svgPath:
-                                                      ImageConstant.imgSearch,
-                                                  margin: getMargin(
-                                                      left: 25,
-                                                      top: 23,
-                                                      right: 13,
-                                                      bottom: 2)),
-                                              AppbarImage(
-                                                  height: getSize(24),
-                                                  width: getSize(24),
-                                                  svgPath: ImageConstant
-                                                      .imgSearchLime50,
-                                                  margin: getMargin(
-                                                      left: 12,
-                                                      top: 22,
-                                                      right: 38),
-                                                  onTap: onTapSearchOne7)
-                                            ],
-                                            styleType: Style.bgFillGray90002_1),
                                         Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.start,
@@ -93,11 +79,10 @@ class BuyerGoogleEarthScreen extends GetWidget<BuyerGoogleEarthController> {
                                                       width: double.maxFinite,
                                                       padding: getPadding(
                                                           left: 15,
-                                                          top: 4,
                                                           right: 15,
                                                           bottom: 4),
                                                       decoration: AppDecoration
-                                                          .gradientGray90003Gray90000,
+                                                .gradientGray90003Gray90000,
                                                       child: Column(
                                                           crossAxisAlignment:
                                                               CrossAxisAlignment
@@ -122,12 +107,11 @@ class BuyerGoogleEarthScreen extends GetWidget<BuyerGoogleEarthController> {
                                                                           Padding(
                                                                               padding: getPadding(top: 8, bottom: 9),
                                                                               child: SizedBox(child: Divider(height: getVerticalSize(54), thickness: getVerticalSize(54), color: ColorConstant.lime50))),
-                                                                          Expanded(
-                                                                              child: Padding(
+                                                                              Padding(
                                                                                   padding: getPadding(left: 5),
                                                                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.start, children: [
                                                                                     Padding(
-                                                                                        padding: getPadding(left: 2),
+                                                                                        padding: getPadding(top:300,left: 2),
                                                                                         child: Row(children: [
                                                                                           Text("lbl_dilli_haat".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtDMSerifDisplayItalic30Lime50),
                                                                                           Container(
@@ -145,9 +129,8 @@ class BuyerGoogleEarthScreen extends GetWidget<BuyerGoogleEarthController> {
                                                                                           CustomImageView(svgPath: ImageConstant.imgLocationLime5024x24, height: getSize(24), width: getSize(24), margin: getMargin(top: 1, bottom: 6)),
                                                                                           Expanded(child: Container(width: getHorizontalSize(251), child: Text("msg_ina_market_dilli".tr, maxLines: null, textAlign: TextAlign.left, style: AppStyle.txtPoppinsSemiBold12Lime50)))
                                                                                         ]))
-                                                                                  ])))
+                                                                                  ])),
                                                                         ]))),
-                                                            Spacer(),
                                                             Container(
                                                                 height: getVerticalSize(
                                                                     113),
@@ -409,24 +392,24 @@ class BuyerGoogleEarthScreen extends GetWidget<BuyerGoogleEarthController> {
                                             ])
                                       ]))
                             ])))),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }
