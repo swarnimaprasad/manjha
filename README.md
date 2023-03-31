@@ -8,3 +8,5 @@
 - Connect your mobile device to your pc
 - In CMD/Powershell, go to the directory of our app for eg: D:\College\FLutter\manjhav3
 - Run ``flutter run``
+
+#### Note: The app maybe choppy at initial install, re-run for best performance
