@@ -1,4 +1,4 @@
-# manjha - andorid app
+# Manjha - andorid app
  
 ### Requirements:
 - Turn on USB Debugging from Developer Options
