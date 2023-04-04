@@ -23,7 +23,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                     width: getSize(40),
                     svgPath: ImageConstant.imgCloseLime50,
                     margin: getMargin(left: 14)),
-                title: Text("   " + "lbl_manjha".tr,
+                title: Text("   " + "MANJHA".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtPoppinsBold16
@@ -114,7 +114,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             MainAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                              "lbl_hi_payal_arora".tr,
+                                                                              "Hi, Payal Arora".tr,
                                                                               overflow: TextOverflow.ellipsis,
                                                                               textAlign: TextAlign.left,
                                                                               style: AppStyle.txtDMSerifDisplayItalic30Lime50),
@@ -182,10 +182,10 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                         children: [
                                                                           Align(
                                                                               alignment: Alignment.topCenter,
-                                                                              child: Text("lbl_followers".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBold12Lime50.copyWith(letterSpacing: getHorizontalSize(0.14)))),
+                                                                              child: Text("FOLLOWERS".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBold12Lime50.copyWith(letterSpacing: getHorizontalSize(0.14)))),
                                                                           Align(
                                                                               alignment: Alignment.bottomCenter,
-                                                                              child: Text("lbl_204".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBlack15.copyWith(letterSpacing: getHorizontalSize(0.18))))
+                                                                              child: Text("204".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBlack15.copyWith(letterSpacing: getHorizontalSize(0.18))))
                                                                         ])),
                                                                 Container(
                                                                     height:
@@ -200,10 +200,10 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                         children: [
                                                                           Align(
                                                                               alignment: Alignment.topCenter,
-                                                                              child: Text("lbl_following".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBold12Lime50.copyWith(letterSpacing: getHorizontalSize(0.14)))),
+                                                                              child: Text("FOLLOWING".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBold12Lime50.copyWith(letterSpacing: getHorizontalSize(0.14)))),
                                                                           Align(
                                                                               alignment: Alignment.bottomCenter,
-                                                                              child: Text("lbl_100".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBlack15.copyWith(letterSpacing: getHorizontalSize(0.18))))
+                                                                              child: Text("100".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsBlack15.copyWith(letterSpacing: getHorizontalSize(0.18))))
                                                                         ]))
                                                               ])),
                                                       Padding(
@@ -237,7 +237,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                   text: TextSpan(
                                                                       children: [
                                                                         TextSpan(
-                                                                            text: "lbl_you_have"
+                                                                            text: "YOU HAVE "
                                                                                 .tr,
                                                                             style: TextStyle(
                                                                                 color: ColorConstant.gray300,
@@ -246,7 +246,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                                 fontWeight: FontWeight.w600,
                                                                                 letterSpacing: getHorizontalSize(1.2))),
                                                                         TextSpan(
-                                                                            text: "msg_200_1000_swadeshi"
+                                                                            text: "200/1000 SWADESHI POINTS"
                                                                                 .tr,
                                                                             style: TextStyle(
                                                                                 color: ColorConstant.gray300,
@@ -298,7 +298,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                       left: 5,
                                                                       top: 20),
                                                               child: Text(
-                                                                  "msg_with_your_help_we"
+                                                                  "WITH YOUR HELP WE HAVE "
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -407,7 +407,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             316),
                                                                         padding: getPadding(
                                                                             left:
-                                                                                30,
+                                                                                71,
                                                                             top:
                                                                                 9,
                                                                             right:
@@ -418,7 +418,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             borderRadius: BorderRadiusStyle
                                                                                 .txtRoundedBorder20),
                                                                         child: Text(
-                                                                            "lbl_edit_profile"
+                                                                            "Edit Profile"
                                                                                 .tr,
                                                                             overflow:
                                                                                 TextOverflow.ellipsis,
@@ -465,7 +465,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             316),
                                                                         padding: getPadding(
                                                                             left:
-                                                                                30,
+                                                                                71,
                                                                             top:
                                                                                 7,
                                                                             right:
@@ -476,7 +476,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             borderRadius: BorderRadiusStyle
                                                                                 .txtRoundedBorder20),
                                                                         child: Text(
-                                                                            "lbl_order_history"
+                                                                            "Order History"
                                                                                 .tr,
                                                                             overflow:
                                                                                 TextOverflow.ellipsis,
@@ -523,7 +523,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             316),
                                                                         padding: getPadding(
                                                                             left:
-                                                                                30,
+                                                                                71,
                                                                             top:
                                                                                 8,
                                                                             right:
@@ -534,7 +534,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                             borderRadius: BorderRadiusStyle
                                                                                 .txtRoundedBorder20),
                                                                         child: Text(
-                                                                            "msg_shipping_address"
+                                                                            "Shipping Address"
                                                                                 .tr,
                                                                             overflow:
                                                                                 TextOverflow.ellipsis,
@@ -582,27 +582,28 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                                                         child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.start, children: [
                                                                           Container(
                                                                               width: getHorizontalSize(316),
-                                                                              padding: getPadding(left: 30, top: 10, right: 71, bottom: 10),
+                                                                              padding: getPadding(left: 71, top: 10, right: 71, bottom: 10),
                                                                               decoration: AppDecoration.txtOutlineGray300.copyWith(borderRadius: BorderRadiusStyle.txtRoundedBorder20),
-                                                                              child: Text("lbl_credit_cards".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsRegular1242.copyWith(letterSpacing: getHorizontalSize(1.24)))),
+                                                                              child: Text("Credit Cards".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsRegular1242.copyWith(letterSpacing: getHorizontalSize(1.24)))),
                                                                           CustomImageView(
                                                                               svgPath: ImageConstant.imgSettingsLime50,
                                                                               height: getVerticalSize(21),
                                                                               width: getHorizontalSize(20),
-                                                                              margin: getMargin(left: 34, top: 29))
+                                                                              margin: getMargin(left: 32, top: 29))
                                                                         ]))),
                                                                 Align(
                                                                     alignment:
                                                                         Alignment
                                                                             .bottomCenter,
                                                                     child: Container(
+                                                                        width: getHorizontalSize(316),
                                                                         margin: getMargin(right: 1),
                                                                         padding: getPadding(left: 71, top: 9, right: 71, bottom: 9),
                                                                         decoration: AppDecoration.outlineGray300.copyWith(borderRadius: BorderRadiusStyle.roundedBorder20),
                                                                         child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
                                                                           Padding(
                                                                               padding: getPadding(top: 3),
-                                                                              child: Text("lbl_settings".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsRegular1242.copyWith(letterSpacing: getHorizontalSize(1.24))))
+                                                                              child: Text("Settings".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtPoppinsRegular1242.copyWith(letterSpacing: getHorizontalSize(1.24))))
                                                                         ])))
                                                               ]))
                                                     ])))
@@ -611,7 +612,7 @@ class FrameTwelveScreen extends GetWidget<FrameTwelveController> {
                                   height: getVerticalSize(1),
                                   thickness: getVerticalSize(1))
                             ])))),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
               Get.toNamed(getCurrentRoute(type));
             })));
