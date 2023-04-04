@@ -13,39 +13,49 @@ class BuyerArticleScreen extends GetWidget<BuyerArticleController> {
     return SafeArea(
         child: Scaffold(
             backgroundColor: ColorConstant.whiteA700,
+             extendBody: true,
+            extendBodyBehindAppBar: true,
             appBar: CustomAppBar(
-                height: getVerticalSize(129),
-                leadingWidth: 42,
+                height: getVerticalSize(50),
+                leadingWidth: 44,
                 leading: AppbarImage(
-                    height: getSize(17),
-                    width: getSize(17),
-                    svgPath: ImageConstant.imgArrowleft,
-                    margin: getMargin(left: 25, top: 24, bottom: 87),
-                    onTap: onTapArrowleft6),
-                title: AppbarImage(
-                    height: getSize(21),
-                    width: getSize(21),
-                    svgPath: ImageConstant.imgMenu,
-                    margin: getMargin(left: 8, top: 23, bottom: 85)),
-                actions: [
-                  AppbarImage(
-                      height: getSize(21),
-                      width: getSize(21),
+                    height: getSize(40),
+                    width: getSize(40),
+                    svgPath: ImageConstant.imgCloseLime50,
+                    margin: getMargin(left: 14)),
+                title:
+                  Text("   "+"lbl_manjha".tr,
+                  overflow:TextOverflow.ellipsis,
+                  textAlign: TextAlign.left,
+                  style: AppStyle.txtPoppinsBold16.copyWith(
+                  letterSpacing:
+                    getHorizontalSize(1.6))),
+                actions:[  AppbarImage(
+                      height: getSize(27),
+                      width: getSize(27),
                       svgPath: ImageConstant.imgSearch,
                       margin:
-                          getMargin(left: 25, top: 23, right: 83, bottom: 2)),
+                          getMargin(left: 135)),
                   AppbarImage(
-                      height: getSize(24),
-                      width: getSize(24),
+                      height: getSize(28),
+                      width: getSize(28),
                       svgPath: ImageConstant.imgSearchLime50,
-                      margin: getMargin(left: 12, top: 22, right: 108),
-                      onTap: onTapSearchOne6)
-                ],
-                styleType: Style.bgFillGray90002_1),
+                      margin: getMargin(left: 12, right:20))
+            ]),
             body: Container(
+                width: size.width,
                 height: size.height,
-                width: double.maxFinite,
-                child: Stack(alignment: Alignment.bottomLeft, children: [
+                padding: getPadding(top: 48),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment(-0.09, 0),
+                        end: Alignment(1, 0.81),
+                        colors: [
+                      Color.fromARGB(255, 36, 34, 30),
+                      Color.fromARGB(255, 140, 140, 140)
+                    ])),
+            child: Stack(alignment: Alignment.bottomLeft, 
+            children: [
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
@@ -124,14 +134,13 @@ class BuyerArticleScreen extends GetWidget<BuyerArticleController> {
                                                               getHorizontalSize(
                                                                   175),
                                                           margin: getMargin(
-                                                              bottom: 22),
+                                                              bottom: 15),
                                                           child: Text(
                                                               "msg_the_blue_pottery"
                                                                   .tr,
                                                               maxLines: null,
                                                               textAlign:
-                                                                  TextAlign
-                                                                      .left,
+                                                                  TextAlign.left,
                                                               style: AppStyle
                                                                   .txtPoppinsBold14Gray90002
                                                                   .copyWith(
@@ -156,9 +165,7 @@ class BuyerArticleScreen extends GetWidget<BuyerArticleController> {
                                                                     getHorizontalSize(
                                                                         171),
                                                                 margin:
-                                                                    getMargin(
-                                                                        right:
-                                                                            54),
+                                                                    getMargin(right:54),
                                                                 child: Text(
                                                                     "msg_a_turbulent_tale2"
                                                                         .tr,
@@ -171,16 +178,12 @@ class BuyerArticleScreen extends GetWidget<BuyerArticleController> {
                                                                         .txtDMSerifDisplayRegular32)),
                                                             Padding(
                                                                 padding:
-                                                                    getPadding(
-                                                                        top:
-                                                                            62),
+                                                                    getPadding(top:47),
                                                                 child: Divider(
                                                                     height:
-                                                                        getVerticalSize(
-                                                                            1),
+                                                                        getVerticalSize(1),
                                                                     thickness:
-                                                                        getVerticalSize(
-                                                                            1),
+                                                                        getVerticalSize(1),
                                                                     color: ColorConstant
                                                                         .gray90002))
                                                           ]))
@@ -188,7 +191,7 @@ class BuyerArticleScreen extends GetWidget<BuyerArticleController> {
                                         Container(
                                             width: getHorizontalSize(219),
                                             margin: getMargin(
-                                                top: 5, right: 6, bottom: 15),
+                                                top: 5, right: 6, bottom: 0),
                                             child: RichText(
                                                 text: TextSpan(children: [
                                                   TextSpan(
@@ -247,24 +250,24 @@ class BuyerArticleScreen extends GetWidget<BuyerArticleController> {
                                                 textAlign: TextAlign.left))
                                       ])))))
                 ])),
-            bottomNavigationBar:
+            floatingActionButton:
                 CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
+              Get.toNamed(getCurrentRoute(type));
             })));
   }
 
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Volume:
-        return AppRoutes.cartPage;
+        return AppRoutes.buyerHomeScreen;
       case BottomBarEnum.Clocklime501:
-        return "/";
+        return AppRoutes.frameEightScreen;
       case BottomBarEnum.Map:
-        return "/";
+        return AppRoutes.eventsScreen;
       case BottomBarEnum.Checkmarklime50:
-        return "/";
+        return AppRoutes.designStudioScreen;
       case BottomBarEnum.Baglime50:
-        return "/";
+        return AppRoutes.cartContainerScreen;
       default:
         return "/";
     }
