@@ -1,4 +1,4 @@
-# Manjha - andorid app
+# Manjha - android app
  
 ### Requirements:
 - Turn on USB Debugging from Developer Options
