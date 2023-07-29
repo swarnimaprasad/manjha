@@ -10,3 +10,4 @@
 - Run ``flutter run``
 
 #### Note: The app maybe choppy at initial install, re-run for best performance
+[Design and Solve - final_compressed.pdf](https://github.com/swarnimaprasad/manjha/files/12208002/Design.and.Solve.-.final_compressed.pdf)
